@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AKS - Atış Kontrol Sistemi</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QMainWindow { background-color: #1e1e2e; }
+QLabel { color: #cdd6f4; }
+QGroupBox { color: #cdd6f4; border: 1px solid #45475a; border-radius: 8px; margin-top: 10px; padding-top: 10px; }
+QGroupBox::title { subcontrol-origin: margin; left: 10px; padding: 0 5px; }
+QLineEdit { background-color: #313244; color: #cdd6f4; border: 1px solid #45475a; border-radius: 4px; padding: 5px; }
+QPushButton { background-color: #89b4fa; color: #1e1e2e; border: none; border-radius: 6px; padding: 8px 16px; font-weight: bold; }
+QPushButton:hover { background-color: #b4befe; }
+QPushButton:disabled { background-color: #45475a; color: #6c7086; }
+QPushButton#fireButton { background-color: #f38ba8; }
+QPushButton#fireButton:hover { background-color: #eba0ac; }
+QPushButton#fireButton:disabled { background-color: #45475a; }</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <property name="spacing">
+     <number>15</number>
+    </property>
+    <property name="margin">
+     <number>20</number>
+    </property>
+    
+    <!-- Connection Status Section -->
+    <item>
+     <widget class="QGroupBox" name="connectionGroup">
+      <property name="title">
+       <string>Haberleşme Durumu</string>
+      </property>
+      <layout class="QHBoxLayout" name="connectionLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="ansLedLabel">
+           <property name="text">
+            <string>ANS:</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="ansLed">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f38ba8; border-radius: 12px;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <widget class="QLabel" name="launcherLedLabel">
+           <property name="text">
+            <string>Lançer:</string>
+           </property>
+           <property name="font">
+            <font>
+             <pointsize>11</pointsize>
+             <bold>true</bold>
+            </font>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="launcherLed">
+           <property name="minimumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>24</width>
+             <height>24</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string>background-color: #f38ba8; border-radius: 12px;</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <spacer>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    
+    <!-- Platform Position Section -->
+    <item>
+     <widget class="QGroupBox" name="positionGroup">
+      <property name="title">
+       <string>Platform Konum Bilgisi (ANS)</string>
+      </property>
+      <layout class="QHBoxLayout" name="positionLayout">
+       <item>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel">
+           <property name="text"><string>Enlem (°)</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="latitudeDisplay">
+           <property name="readOnly"><bool>true</bool></property>
+           <property name="text"><string>0.0</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel">
+           <property name="text"><string>Boylam (°)</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="longitudeDisplay">
+           <property name="readOnly"><bool>true</bool></property>
+           <property name="text"><string>0.0</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <layout class="QVBoxLayout">
+         <item>
+          <widget class="QLabel">
+           <property name="text"><string>İrtifa (m)</string></property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLineEdit" name="altitudeDisplay">
+           <property name="readOnly"><bool>true</bool></property>
+           <property name="text"><string>0.0</string></property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    
+    <!-- Target Input Section -->
+    <item>
+     <widget class="QGroupBox" name="targetGroup">
+      <property name="title">
+       <string>Hedef Bilgileri</string>
+      </property>
+      <layout class="QVBoxLayout">
+       <item>
+        <layout class="QHBoxLayout">
+         <item>
+          <layout class="QVBoxLayout">
+           <item><widget class="QLabel"><property name="text"><string>Enlem (°)</string></property></widget></item>
+           <item><widget class="QLineEdit" name="targetLatInput"><property name="placeholderText"><string>39.925</string></property></widget></item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item><widget class="QLabel"><property name="text"><string>Boylam (°)</string></property></widget></item>
+           <item><widget class="QLineEdit" name="targetLonInput"><property name="placeholderText"><string>32.836</string></property></widget></item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item><widget class="QLabel"><property name="text"><string>İrtifa (m)</string></property></widget></item>
+           <item><widget class="QLineEdit" name="targetAltInput"><property name="placeholderText"><string>850</string></property></widget></item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item><widget class="QLabel"><property name="text"><string>Hız (m/s)</string></property></widget></item>
+           <item><widget class="QLineEdit" name="targetSpeedInput"><property name="placeholderText"><string>250</string></property></widget></item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QVBoxLayout">
+           <item><widget class="QLabel"><property name="text"><string>Mesafe (m)</string></property></widget></item>
+           <item><widget class="QLineEdit" name="targetDistanceInput"><property name="placeholderText"><string>15000</string></property></widget></item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QPushButton" name="setTargetButton">
+         <property name="text">
+          <string>Hedef Bilgilerini Ayarla</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+    
+    <!-- Launcher Section (placeholder for custom widget) -->
+    <item>
+     <widget class="QGroupBox" name="launcherGroup">
+      <property name="title">
+       <string>Lançer ve Füzeler</string>
+      </property>
+      <layout class="QVBoxLayout" name="launcherLayout">
+       <!-- LauncherWidget will be added programmatically -->
+      </layout>
+     </widget>
+    </item>
+    
+    <!-- Fire Button -->
+    <item>
+     <widget class="QPushButton" name="fireButton">
+      <property name="text">
+       <string>ATEŞLE</string>
+      </property>
+      <property name="enabled">
+       <bool>false</bool>
+      </property>
+      <property name="minimumHeight">
+       <number>50</number>
+      </property>
+      <property name="font">
+       <font>
+        <pointsize>14</pointsize>
+        <bold>true</bold>
+       </font>
+      </property>
+     </widget>
+    </item>
+    
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

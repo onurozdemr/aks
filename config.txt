@@ -1,0 +1,5 @@
+FuzeNumarasi    FuzeIsmi    FuzeSaglikDurumu
+1               A           OK
+2               B           NOK
+3
+4               D           OK
