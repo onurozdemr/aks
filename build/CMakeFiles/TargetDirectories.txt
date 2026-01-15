@@ -1,0 +1,5 @@
+C:/Users/onuro/Desktop/r/aks/build/CMakeFiles/aks_gui.dir
+C:/Users/onuro/Desktop/r/aks/build/CMakeFiles/edit_cache.dir
+C:/Users/onuro/Desktop/r/aks/build/CMakeFiles/rebuild_cache.dir
+C:/Users/onuro/Desktop/r/aks/build/CMakeFiles/aks_gui_autogen_timestamp_deps.dir
+C:/Users/onuro/Desktop/r/aks/build/CMakeFiles/aks_gui_autogen.dir
